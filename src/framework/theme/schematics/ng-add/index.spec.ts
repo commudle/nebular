@@ -195,7 +195,7 @@ describe('ng-add', () => {
   it('should register inline theme if no theme already registered', (done) => {
     runSetupSchematic({ customization: false }).subscribe(async (tree) => {
       const workspace = await getWorkspace(tree);
-      const project = getProjectFromWorkspace(workspace);
+      const project = getProjectFromWorkspace(workspace, undefined);
       const styles = getProjectTargetOptions(project, 'build').styles;
 
       expect(styles).toContain('./node_modules/@nebular/theme/styles/prebuilt/default.css');
@@ -248,7 +248,7 @@ describe('ng-add', () => {
 
   it('should not add NoopAnimationsModule if BrowserAnimationsModule is set up', async () => {
     const workspace = await getWorkspace(appTree);
-    const project = getProjectFromWorkspace(workspace);
+    const project = getProjectFromWorkspace(workspace, undefined);
 
     // Simulate the case where a developer uses `ng-add` on an Angular CLI project which already
     // explicitly uses the `BrowserAnimationsModule`. It would be wrong to forcibly change

@@ -27,14 +27,17 @@ export function getClassWithDecorator(tree: Tree, path: Path, decoratorName: str
  * /angular-cli/blob/e3f56ebc71d57c79528fb4926a267e5ed4f9c74d/packages/schematics/angular/utility/ast-utils.ts#L282
  */
 export function hasDecoratorCall(classDeclaration: ts.ClassDeclaration, decoratorName: string): boolean {
-  if (classDeclaration.decorators == null) {
+  if (ts.canHaveDecorators(classDeclaration)) {
     return false;
   }
 
-  return classDeclaration.decorators
-    .filter((d) => d.expression.kind === ts.SyntaxKind.CallExpression)
-    .map((d) => (d.expression as ts.CallExpression).expression)
-    .some((decoratorFactoryCall) => decoratorFactoryCall.getText() === decoratorName);
+  return (
+    ts
+      .getDecorators(classDeclaration)
+      ?.filter((d) => d.expression.kind === ts.SyntaxKind.CallExpression)
+      .map((d) => (d.expression as ts.CallExpression).expression)
+      .some((decoratorFactoryCall) => decoratorFactoryCall.getText() === decoratorName) || false
+  );
 }
 
 /**
