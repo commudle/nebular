@@ -5,7 +5,7 @@
  */
 
 import { Component, ElementRef, EventEmitter, Input, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { ComponentFixture, fakeAsync, flush, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, flush, TestBed, tick } from '@angular/core/testing';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -737,6 +737,8 @@ describe('NbSelectComponent - falsy values', () => {
     testComponent.noValueOption.onClick(eventMock);
     fixture.detectChanges();
 
+    tick(1000);
+
     expect(select.selectionModel.length).toEqual(0);
   }));
 
@@ -746,6 +748,8 @@ describe('NbSelectComponent - falsy values', () => {
 
     testComponent.nullOption.onClick(eventMock);
     fixture.detectChanges();
+
+    tick(1000);
 
     expect(select.selectionModel.length).toEqual(0);
   }));
@@ -757,6 +761,8 @@ describe('NbSelectComponent - falsy values', () => {
     testComponent.undefinedOption.onClick(eventMock);
     fixture.detectChanges();
 
+    tick(1000);
+
     expect(select.selectionModel.length).toEqual(0);
   }));
 
@@ -766,6 +772,8 @@ describe('NbSelectComponent - falsy values', () => {
 
     testComponent.falseOption.onClick(eventMock);
     fixture.detectChanges();
+
+    tick(1000);
 
     expect(select.selectionModel.length).toEqual(1);
   }));
@@ -777,6 +785,8 @@ describe('NbSelectComponent - falsy values', () => {
     testComponent.zeroOption.onClick(eventMock);
     fixture.detectChanges();
 
+    tick(1000);
+
     expect(select.selectionModel.length).toEqual(1);
   }));
 
@@ -787,6 +797,8 @@ describe('NbSelectComponent - falsy values', () => {
     testComponent.emptyStringOption.onClick(eventMock);
     fixture.detectChanges();
 
+    tick(1000);
+
     expect(select.selectionModel.length).toEqual(1);
   }));
 
@@ -796,6 +808,8 @@ describe('NbSelectComponent - falsy values', () => {
 
     testComponent.nanOption.onClick(eventMock);
     fixture.detectChanges();
+
+    tick(1000);
 
     expect(select.selectionModel.length).toEqual(1);
   }));
