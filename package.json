@@ -1,14 +1,16 @@
 {
-  "name": "nebular",
+  "name": "@commudle/nebular",
   "version": "9.1.0-rc.7",
   "license": "MIT",
-  "author": "akveo <contact@akveo.com>",
-  "private": true,
+  "author": "Commudle <more@commudle.com>",
   "bugs": {
-    "url": "https://github.com/akveo/nebular/issues"
+    "url": "https://github.com/commudle/nebular/issues"
   },
-  "homepage": "https://github.com/akveo/nebular#readme",
-  "repository": "git+https://github.com/akveo/nebular.git",
+  "homepage": "https://github.com/commudle/nebular#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commudle/nebular.git"
+  },
   "scripts": {
     "ng": "ng",
     "prestart": "npm run gen:playground",
