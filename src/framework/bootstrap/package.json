@@ -21,8 +21,9 @@
     "nebular"
   ],
   "peerDependencies": {
-    "bootstrap": "^4.0.0",
-    "@nebular/theme": "9.1.0-rc.7"
+    "@nebular/theme": "9.1.0-rc.7",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2"
   },
   "exports": {
     "./styles/prebuilt/corporate.css": {
