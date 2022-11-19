@@ -546,19 +546,19 @@ export const PLAYGROUND_COMPONENTS: ComponentLink[] = [
       },
       {
         path: 'date-timepicker-dynamic-inputs-showcase.component',
-        link: '/datepicker/date-timepicker-dynamic-inputs-showcase.component',
+        link: '/datepicker-with-format/date-timepicker-dynamic-inputs-showcase.component',
         component: 'DateTimepickerDynamicInputsShowcaseComponent',
         name: 'Date Timepicker Dynamic Inputs Showcase',
       },
       {
         path: 'datepicker-dynamic-inputs-showcase.component',
-        link: '/datepicker/datepicker-dynamic-inputs-showcase.component',
+        link: '/datepicker-with-format/datepicker-dynamic-inputs-showcase.component',
         component: 'DatepickerDynamicInputsShowcaseComponent',
         name: 'Datepicker Dynamic Inputs Showcase',
       },
       {
         path: 'rangepicker-dynamic-inputs-showcase.component',
-        link: '/datepicker/rangepicker-dynamic-inputs-showcase.component',
+        link: '/datepicker-with-format/rangepicker-dynamic-inputs-showcase.component',
         component: 'RangepickerDynamicInputsShowcaseComponent',
         name: 'Rangepicker Dynamic Inputs Showcase',
       },
