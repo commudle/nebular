@@ -20,7 +20,7 @@
     },
     "**/*.js.map": true,
 
-    // exclude @nebular build folders
+    // exclude @commudle build folders
     "**/dist": true
   }
 }

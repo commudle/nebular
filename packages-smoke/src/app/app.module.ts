@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule } from '@nebular/theme';
-import { NbAuthModule } from '@nebular/auth';
-import { NbSecurityModule } from '@nebular/security';
-import { NbMomentDateModule } from '@nebular/moment';
-import { NbDateFnsDateModule } from '@nebular/date-fns';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbThemeModule } from '@commudle/theme';
+import { NbAuthModule } from '@commudle/auth';
+import { NbSecurityModule } from '@commudle/security';
+import { NbMomentDateModule } from '@commudle/moment';
+import { NbDateFnsDateModule } from '@commudle/date-fns';
+import { NbEvaIconsModule } from '@commudle/eva-icons';
 
 @NgModule({
   declarations: [AppComponent],

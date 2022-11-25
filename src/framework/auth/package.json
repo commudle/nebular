@@ -1,7 +1,7 @@
 {
-  "name": "@nebular/auth",
+  "name": "@commudle/auth",
   "version": "9.1.0-rc.8",
-  "description": "@nebular/auth",
+  "description": "@commudle/auth",
   "author": "akveo",
   "license": "MIT",
   "repository": {
@@ -28,7 +28,7 @@
     "@angular/core": "^14.2.7",
     "@angular/router": "^14.2.7",
     "@angular/forms": "^14.2.7",
-    "@nebular/theme": "9.1.0-rc.8",
+    "@commudle/theme": "9.1.0-rc.8",
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "dependencies": {

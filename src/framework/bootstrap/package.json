@@ -1,7 +1,7 @@
 {
-  "name": "@nebular/bootstrap",
+  "name": "@commudle/bootstrap",
   "version": "9.1.0-rc.8",
-  "description": "@nebular/bootstrap",
+  "description": "@commudle/bootstrap",
   "author": "akveo",
   "license": "MIT",
   "repository": {
@@ -21,7 +21,7 @@
     "nebular"
   ],
   "peerDependencies": {
-    "@nebular/theme": "9.1.0-rc.8",
+    "@commudle/theme": "9.1.0-rc.8",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2"
   },

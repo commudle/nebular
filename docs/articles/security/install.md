@@ -9,17 +9,18 @@
 
 First, let's install the module as it's distributed as an npm package. Security module doesn't have a dependency on Auth or Theme modules, but it is recommended to use them in conjunction.
 
-
 ```bash
-npm i @nebular/security
+npm i @commudle/security
 ```
-<hr>   
+
+<hr>
 
 ## Import the module:
 
 ```ts
-import { NbSecurityModule } from '@nebular/security';
+import { NbSecurityModule } from '@commudle/security';
 ```
+
 <hr>
 
 ## Register it
@@ -30,7 +31,7 @@ Now, let's register the module in the root module:
 @NgModule({
   imports: [
    // ...
-    
+
    NbSecurityModule.forRoot(),
 ```
 

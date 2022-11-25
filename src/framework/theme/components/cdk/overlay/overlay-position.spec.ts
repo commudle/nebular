@@ -15,7 +15,7 @@ import {
   NbAdjustment,
   NbViewportRulerAdapter,
   NbLayoutDirectionService,
-} from '@nebular/theme';
+} from '@commudle/theme';
 
 @Injectable()
 export class MockViewportRulerAdapter extends NbViewportRulerAdapter {

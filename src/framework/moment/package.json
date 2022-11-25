@@ -1,7 +1,7 @@
 {
-  "name": "@nebular/moment",
+  "name": "@commudle/moment",
   "version": "9.1.0-rc.8",
-  "description": "@nebular/moment",
+  "description": "@commudle/moment",
   "author": "akveo",
   "license": "MIT",
   "repository": {
@@ -21,7 +21,7 @@
     "nebular"
   ],
   "peerDependencies": {
-    "@nebular/theme": "9.1.0-rc.8",
+    "@commudle/theme": "9.1.0-rc.8",
     "moment": "^2.22.2"
   },
   "dependencies": {
