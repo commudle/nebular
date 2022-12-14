@@ -1,3 +1,19 @@
+<a name="10.0.0"></a>
+
+# [10.0.0](https://github.com/akveo/nebular/compare/v9.1.0-rc.8...v10.0.0) (2022-12-02)
+
+### BREAKING CHANGES
+
+- **bootstrap:** remove `bootstrap`, `ng-bootstrap` packages, remove `bootstrap` from `playground/without-styles/bootstrap`. `ng-bootstrap` doesn't support Angular v14.2.x ([#3146](https://github.com/akveo/nebular/issues/3146)) ([f3f05ce](https://github.com/akveo/nebular/commit/f3f05ce))
+
+### Features
+
+- update to Angular 14.2.x ([#3143](https://github.com/akveo/nebular/issues/3143)) ([275edf3](https://github.com/akveo/nebular/commit/275edf3))
+
+#### Other
+
+- Minimal required Angular version is `14.2.x`
+
 <a name="9.1.0-rc.8"></a>
 
 # [9.1.0-rc.8](https://github.com/akveo/nebular/compare/v9.1.0-rc.7...v9.1.0-rc.8) (2022-11-17)
