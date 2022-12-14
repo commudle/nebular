@@ -7,7 +7,7 @@
 @use '../../theming' as *;
 
 @mixin nb-tables-smart-table-theme() {
-  ng2-smart-table {
+  angular2-smart-table {
     table tr th,
     table tr th a {
       font-family: nb-theme(smart-table-header-font-family);
@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
 
-    table tr.ng2-smart-titles {
+    table tr.angular2-smart-titles {
       th {
         padding: nb-theme(smart-table-padding);
         @include nb-ltr(padding-right, 1.75rem);
@@ -72,10 +72,10 @@
     thead tr {
       background: nb-theme(smart-table-header-bg);
 
-      &.ng2-smart-filters th {
+      &.angular2-smart-filters th {
         padding: nb-theme(smart-table-filter-padding);
 
-        .ng2-smart-filter input {
+        .angular2-smart-filter input {
           line-height: nb-theme(smart-table-line-height);
         }
       }
@@ -93,7 +93,7 @@
     }
 
     // Actions
-    th.ng2-smart-actions-title-add {
+    th.angular2-smart-actions-title-add {
       a {
         display: flex;
         align-items: center;
@@ -122,19 +122,19 @@
       }
     }
 
-    .ng2-smart-actions {
+    .angular2-smart-actions {
       padding: 0;
       // fix for 100% height child
       height: 1px;
 
-      ng2-st-tbody-edit-delete,
-      ng2-st-tbody-create-cancel,
-      ng2-st-actions {
+      angular2-st-tbody-edit-delete,
+      angular2-st-tbody-create-cancel,
+      angular2-st-actions {
         display: flex;
         height: 100%;
       }
 
-      a.ng2-smart-action {
+      a.angular2-smart-action {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -153,15 +153,15 @@
         }
       }
 
-      .ng2-smart-action-add-create:hover,
-      .ng2-smart-action-edit-edit:hover,
-      .ng2-smart-action-edit-save:hover {
+      .angular2-smart-action-add-create:hover,
+      .angular2-smart-action-edit-edit:hover,
+      .angular2-smart-action-edit-save:hover {
         color: nb-theme(smart-table-action-add-edit-hover-text-color);
       }
 
-      .ng2-smart-action-add-cancel:hover,
-      .ng2-smart-action-delete-delete:hover,
-      .ng2-smart-action-edit-cancel:hover {
+      .angular2-smart-action-add-cancel:hover,
+      .angular2-smart-action-delete-delete:hover,
+      .angular2-smart-action-edit-cancel:hover {
         color: nb-theme(smart-table-action-cancel-delete-hover-text-color);
       }
     }
@@ -172,17 +172,17 @@
       margin: -7.5px -12px;
     }
 
-    ng2-smart-table-pager {
+    angular2-smart-table-pager {
       display: block;
     }
 
     //Paging
-    nav.ng2-smart-pagination-nav {
+    nav.angular2-smart-pagination-nav {
       display: flex;
       justify-content: center;
       margin-top: 1.25rem;
 
-      .ng2-smart-pagination {
+      .angular2-smart-pagination {
         display: flex;
         padding: 0;
 
