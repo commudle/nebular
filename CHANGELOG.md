@@ -1,3 +1,24 @@
+<a name="11.0.1"></a>
+
+## [11.0.1](https://github.com/akveo/nebular/compare/v11.0.0...v11.0.1) (2023-09-06)
+
+### Features
+
+* **select-with-autocomplete:** add search when multi ([#3204](https://github.com/akveo/nebular/issues/3204)) ([8792f84](https://github.com/akveo/nebular/commit/8792f84))
+
+<a name="11.0.0"></a>
+
+# [11.0.0](https://github.com/akveo/nebular/compare/v10.0.0...v11.0.0) (2023-03-29)
+
+### Bug Fixes
+
+- **autocomplete:** fix show options for the autocomplete ([#3152](https://github.com/akveo/nebular/issues/3152)) ([a693caf](https://github.com/akveo/nebular/commit/a693caf))
+- **docs:** remove bootstrap from docs ([#3164](https://github.com/akveo/nebular/issues/3164)) ([b711f1d](https://github.com/akveo/nebular/commit/b711f1d))
+
+### Features
+
+- update to Angular 15 ([#3163](https://github.com/akveo/nebular/issues/3163)) ([f3098ea](https://github.com/akveo/nebular/commit/f3098ea))
+
 <a name="10.0.0"></a>
 
 # [10.0.0](https://github.com/akveo/nebular/compare/v9.1.0-rc.8...v10.0.0) (2022-12-02)
@@ -1241,7 +1262,7 @@ Nebular 2.0 is stable now! After 10 release candidates and a year of work we fin
 - **button:** fix outline button ([0bcad95](https://github.com/akveo/nebular/commit/0bcad95))
 - **calendar:** use nbButton in calendar navigation ([#837](https://github.com/akveo/nebular/issues/837)) ([f460f85](https://github.com/akveo/nebular/commit/f460f85)), closes [#827](https://github.com/akveo/nebular/issues/827)
 - **checkbox, radio:** check mark positioning in IE ([#830](https://github.com/akveo/nebular/issues/830)) ([ac52315](https://github.com/akveo/nebular/commit/ac52315)), closes [#743](https://github.com/akveo/nebular/issues/743)
-- **docs:**  fix warning `Invalid value for $grid-breakpoints..` ([#736](https://github.com/akveo/nebular/issues/736)) ([23e7804](https://github.com/akveo/nebular/commit/23e7804))
+- **docs:** fix warning `Invalid value for $grid-breakpoints..` ([#736](https://github.com/akveo/nebular/issues/736)) ([23e7804](https://github.com/akveo/nebular/commit/23e7804))
 - **docs:** add radio icon ([#748](https://github.com/akveo/nebular/issues/748)) ([9110266](https://github.com/akveo/nebular/commit/9110266))
 - **docs:** fix mention of angular-cli.json file to `angular.json` ([#701](https://github.com/akveo/nebular/issues/701)) ([3211c54](https://github.com/akveo/nebular/commit/3211c54))
 - **e2e:** add redundance note in protractor.conf.ci.js ([#839](https://github.com/akveo/nebular/issues/839)) ([a7ed638](https://github.com/akveo/nebular/commit/a7ed638))
