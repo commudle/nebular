@@ -1,102 +1,128 @@
+<a name="11.0.1"></a>
+
+## [11.0.1](https://github.com/akveo/nebular/compare/v11.0.0...v11.0.1) (2023-09-06)
+
+### Features
+
+* **select-with-autocomplete:** add search when multi ([#3204](https://github.com/akveo/nebular/issues/3204)) ([8792f84](https://github.com/akveo/nebular/commit/8792f84))
+
+<a name="11.0.0"></a>
+
+# [11.0.0](https://github.com/akveo/nebular/compare/v10.0.0...v11.0.0) (2023-03-29)
+
+### Bug Fixes
+
+- **autocomplete:** fix show options for the autocomplete ([#3152](https://github.com/akveo/nebular/issues/3152)) ([a693caf](https://github.com/akveo/nebular/commit/a693caf))
+- **docs:** remove bootstrap from docs ([#3164](https://github.com/akveo/nebular/issues/3164)) ([b711f1d](https://github.com/akveo/nebular/commit/b711f1d))
+
+### Features
+
+- update to Angular 15 ([#3163](https://github.com/akveo/nebular/issues/3163)) ([f3098ea](https://github.com/akveo/nebular/commit/f3098ea))
+
+<a name="10.0.0"></a>
+
+# [10.0.0](https://github.com/akveo/nebular/compare/v9.1.0-rc.8...v10.0.0) (2022-12-02)
+
+### BREAKING CHANGES
+
+- **bootstrap:** remove `bootstrap`, `ng-bootstrap` packages, remove `bootstrap` from `playground/without-styles/bootstrap`. `ng-bootstrap` doesn't support Angular v14.2.x ([#3146](https://github.com/akveo/nebular/issues/3146)) ([f3f05ce](https://github.com/akveo/nebular/commit/f3f05ce))
+
+### Features
+
+- update to Angular 14.2.x ([#3143](https://github.com/akveo/nebular/issues/3143)) ([275edf3](https://github.com/akveo/nebular/commit/275edf3))
+
+#### Other
+
+- Minimal required Angular version is `14.2.x`
+
+<a name="9.1.0-rc.8"></a>
+
+# [9.1.0-rc.8](https://github.com/akveo/nebular/compare/v9.1.0-rc.7...v9.1.0-rc.8) (2022-11-17)
+
+### Features
+
+- **menu component:** improve accessibility ([#3136](https://github.com/akveo/nebular/issues/3136)) ([7ce24c0](https://github.com/akveo/nebular/commit/7ce24c0))
+- **timepicker:** add disabled state ([#3127](https://github.com/akveo/nebular/issues/3127)) ([7af5a8d](https://github.com/akveo/nebular/commit/7af5a8d))
+
 <a name="9.1.0-rc.7"></a>
+
 # [9.1.0-rc.7](https://github.com/akveo/nebular/compare/v9.1.0-rc.6...v9.1.0-rc.7) (2022-10-10)
 
-
 ### Bug Fixes
 
-* **themes:** fix typo in layout component style ([#3098](https://github.com/akveo/nebular/issues/3098)) ([5740682](https://github.com/akveo/nebular/commit/5740682))
-
+- **themes:** fix typo in layout component style ([#3098](https://github.com/akveo/nebular/issues/3098)) ([5740682](https://github.com/akveo/nebular/commit/5740682))
 
 ### Features
 
-* **datepicker:** improve date and time inputs combination ([#3117](https://github.com/akveo/nebular/issues/3117)) ([8387967](https://github.com/akveo/nebular/commit/8387967))
-
-
+- **datepicker:** improve date and time inputs combination ([#3117](https://github.com/akveo/nebular/issues/3117)) ([8387967](https://github.com/akveo/nebular/commit/8387967))
 
 <a name="9.1.0-rc.6"></a>
+
 # [9.1.0-rc.6](https://github.com/akveo/nebular/compare/v9.1.0-rc.5...v9.1.0-rc.6) (2022-09-22)
 
-
 ### Bug Fixes
 
-* **select-with-autocomplete:** fix select autocomplete width ([#3113](https://github.com/akveo/nebular/issues/3113)) ([078c9f3](https://github.com/akveo/nebular/commit/078c9f3))
-
-
+- **select-with-autocomplete:** fix select autocomplete width ([#3113](https://github.com/akveo/nebular/issues/3113)) ([078c9f3](https://github.com/akveo/nebular/commit/078c9f3))
 
 <a name="9.1.0-rc.5"></a>
+
 # [9.1.0-rc.5](https://github.com/akveo/nebular/compare/v9.1.0-rc.4...v9.1.0-rc.5) (2022-09-15)
 
-
 ### Bug Fixes
 
-* **select-with-autocomplete:** improve select open after input changed ([#3110](https://github.com/akveo/nebular/issues/3110)) ([eaa036b](https://github.com/akveo/nebular/commit/eaa036b))
-
-
+- **select-with-autocomplete:** improve select open after input changed ([#3110](https://github.com/akveo/nebular/issues/3110)) ([eaa036b](https://github.com/akveo/nebular/commit/eaa036b))
 
 <a name="9.1.0-rc.4"></a>
+
 # [9.1.0-rc.4](https://github.com/akveo/nebular/compare/v9.1.0-rc.3...v9.1.0-rc.4) (2022-09-09)
 
-
 ### Features
 
-* **input:** add more input color options ([#3108](https://github.com/akveo/nebular/issues/3108)) ([54da714](https://github.com/akveo/nebular/commit/54da714))
-
-
+- **input:** add more input color options ([#3108](https://github.com/akveo/nebular/issues/3108)) ([54da714](https://github.com/akveo/nebular/commit/54da714))
 
 <a name="9.1.0-rc.3"></a>
+
 # [9.1.0-rc.3](https://github.com/akveo/nebular/compare/v9.1.0-rc.2...v9.1.0-rc.3) (2022-09-08)
 
-
 ### Bug Fixes
 
-* **select-with-autocomplete:** fix first render with disabled autocomplete ([#3104](https://github.com/akveo/nebular/issues/3104)) ([efcd690](https://github.com/akveo/nebular/commit/efcd690))
-
-
+- **select-with-autocomplete:** fix first render with disabled autocomplete ([#3104](https://github.com/akveo/nebular/issues/3104)) ([efcd690](https://github.com/akveo/nebular/commit/efcd690))
 
 <a name="9.1.0-rc.2"></a>
+
 # [9.1.0-rc.2](https://github.com/akveo/nebular/compare/v9.1.0-rc.1...v9.1.0-rc.2) (2022-08-31)
 
-
 ### Features
 
-* add keyboad navigation to select with autocomplete ([#3097](https://github.com/akveo/nebular/issues/3097)) ([c52fe3a](https://github.com/akveo/nebular/commit/c52fe3a))
-
-
+- add keyboad navigation to select with autocomplete ([#3097](https://github.com/akveo/nebular/issues/3097)) ([c52fe3a](https://github.com/akveo/nebular/commit/c52fe3a))
 
 <a name="9.1.0-rc.1"></a>
-# [9.1.0-rc.1](https://github.com/akveo/nebular/compare/v9.0.3...v9.1.0-rc.1) (2022-08-04)
 
+# [9.1.0-rc.1](https://github.com/akveo/nebular/compare/v9.0.3...v9.1.0-rc.1) (2022-08-04)
 
 ### Bug Fixes
 
-* **timepicker:** change position adjustment to "counterclockwise" ([#3085](https://github.com/akveo/nebular/issues/3085)) ([a546295](https://github.com/akveo/nebular/commit/a546295))
-
+- **timepicker:** change position adjustment to "counterclockwise" ([#3085](https://github.com/akveo/nebular/issues/3085)) ([a546295](https://github.com/akveo/nebular/commit/a546295))
 
 ### Features
 
-* **select:** options search ([#3091](https://github.com/akveo/nebular/issues/3091)) ([ff4f738](https://github.com/akveo/nebular/commit/ff4f738))
-
-
+- **select:** options search ([#3091](https://github.com/akveo/nebular/issues/3091)) ([ff4f738](https://github.com/akveo/nebular/commit/ff4f738))
 
 <a name="9.0.3"></a>
-## [9.0.3](https://github.com/akveo/nebular/compare/v9.0.2...v9.0.3) (2022-05-26)
 
+## [9.0.3](https://github.com/akveo/nebular/compare/v9.0.2...v9.0.3) (2022-05-26)
 
 ### Bug Fixes
 
-* **select:** disable opening disabled select after clicking on content ([#3068](https://github.com/akveo/nebular/issues/3068)) ([1c6ef1b](https://github.com/akveo/nebular/commit/1c6ef1b))
-
-
+- **select:** disable opening disabled select after clicking on content ([#3068](https://github.com/akveo/nebular/issues/3068)) ([1c6ef1b](https://github.com/akveo/nebular/commit/1c6ef1b))
 
 <a name="9.0.2"></a>
-## [9.0.2](https://github.com/akveo/nebular/compare/v9.0.1...v9.0.2) (2022-04-07)
 
+## [9.0.2](https://github.com/akveo/nebular/compare/v9.0.1...v9.0.2) (2022-04-07)
 
 ### Bug Fixes
 
 - **datepicker:** fix initial value render ([#3050](https://github.com/akveo/nebular/issues/3050)) ([e821643](https://github.com/akveo/nebular/commit/e821643))
-
-
 
 <a name="9.0.1"></a>
 
@@ -120,10 +146,10 @@ This change doesn't affect users who use prebuilt Nebular themes. For prebult th
 
 #### API changes
 
-- `@nebular/theme/styles/_components.scss` file removed. Replace imports from this files with:
+- `@commudle/theme/styles/_components.scss` file removed. Replace imports from this files with:
   ```
-  @import '@nebular/theme/styles/theming';
-  @import '@nebular/theme/styles/themes';
+  @import '@commudle/theme/styles/theming';
+  @import '@commudle/theme/styles/themes';
   ```
 - `layout-window-mode-max-width`, `tabset-tab-text-hide-breakpoint`, `route-tabset-tab-text-hide-breakpoint` theme properties removed. [Migration guide](https://github.com/akveo/nebular/pull/2965#issuecomment-984410175).
 - **overlay trigger:** `NbTriggerStrategyBase`'s `isNotOnHostOrContainer`, `isOnHostOrContainer`, `isOnHost`, `isOnContainer` methods now expect `Element` instead of `Event` as the first parameter. Pass `event.target as Element` instead of `event`.
@@ -280,7 +306,7 @@ This change doesn't affect users who use prebuilt Nebular themes. For prebult th
 - **deps:**
 
   - Bump Angular version to 11+.
-  - `@nebular/fire` requires `@angular/fire` 6.1.0+ and `firebase` 8.0.0+.
+  - `@commudle/fire` requires `@angular/fire` 6.1.0+ and `firebase` 8.0.0+.
 
 - **sidebar:** Added change detector ref constructor parameter.
 
@@ -308,7 +334,7 @@ This change doesn't affect users who use prebuilt Nebular themes. For prebult th
 
 - **theme:** `NbPositionedContainer` renamed to `NbPositionedContainerComponent`.
 
-- **auth:** `~@nebular/auth/styles/all`file removed. Replace `~@nebular/auth/styles/all` imports with `~@nebular/auth/styles/globals`.
+- **auth:** `~@commudle/auth/styles/all`file removed. Replace `~@commudle/auth/styles/all` imports with `~@commudle/auth/styles/globals`.
 
 - **theme:**:
 
@@ -864,7 +890,7 @@ We would appreciate hearing your feedback on the update steps, quality of the gu
 
 ### Features
 
-- **icons:** new `nb-icon` component, icons library, and [@nebular](https://github.com/nebular)/eva-icons package ([#1319](https://github.com/akveo/nebular/issues/1319)) ([621f461](https://github.com/akveo/nebular/commit/621f461))
+- **icons:** new `nb-icon` component, icons library, and [@commudle](https://github.com/nebular)/eva-icons package ([#1319](https://github.com/akveo/nebular/issues/1319)) ([621f461](https://github.com/akveo/nebular/commit/621f461))
 - **theme:** css variables support ([#1257](https://github.com/akveo/nebular/issues/1257)) ([da136da](https://github.com/akveo/nebular/commit/da136da)), closes [#46](https://github.com/akveo/nebular/issues/46)
 - **accordion:** Eva styles ([#1362](https://github.com/akveo/nebular/issues/1362)) ([98a159c](https://github.com/akveo/nebular/commit/98a159c))
 - **actions:** Eva style ([#1397](https://github.com/akveo/nebular/issues/1397)) ([6399fab](https://github.com/akveo/nebular/commit/6399fab))
@@ -881,7 +907,7 @@ We would appreciate hearing your feedback on the update steps, quality of the gu
 - **docs:** Eva update ([#1433](https://github.com/akveo/nebular/issues/1433)) ([e4fb525](https://github.com/akveo/nebular/commit/e4fb525))
 - **docs:** new landing ([#1412](https://github.com/akveo/nebular/issues/1412)) ([34166a4](https://github.com/akveo/nebular/commit/34166a4))
 - **icon:** Eva theme ([#1404](https://github.com/akveo/nebular/issues/1404)) ([16f2d19](https://github.com/akveo/nebular/commit/16f2d19))
-- **icons:** new `nb-icon` component, icons library, and [@nebular](https://github.com/nebular)/eva-icons package ([#1319](https://github.com/akveo/nebular/issues/1319)) ([621f461](https://github.com/akveo/nebular/commit/621f461))
+- **icons:** new `nb-icon` component, icons library, and [@commudle](https://github.com/nebular)/eva-icons package ([#1319](https://github.com/akveo/nebular/issues/1319)) ([621f461](https://github.com/akveo/nebular/commit/621f461))
 - **input:** Eva style ([#1343](https://github.com/akveo/nebular/issues/1343)) ([c9c288b](https://github.com/akveo/nebular/commit/c9c288b))
 - **layout:** Eva style ([#1368](https://github.com/akveo/nebular/issues/1368)) ([c373cfc](https://github.com/akveo/nebular/commit/c373cfc))
 - **list:** Eva style ([#1363](https://github.com/akveo/nebular/issues/1363)) ([b280112](https://github.com/akveo/nebular/commit/b280112))
@@ -929,10 +955,10 @@ We would appreciate hearing your feedback on the update steps, quality of the gu
 
 - **themes:** - `nb-theme` function now throws an error if an unused variable is accessed
 
-* custom auth variables are removed and replaced with @nebular/theme variables
-* `nb-install` function moved into `@nebular/theme/styles/theming`
+* custom auth variables are removed and replaced with @commudle/theme variables
+* `nb-install` function moved into `@commudle/theme/styles/theming`
 * auth components now use `nb-icon` instead of icon css class
-* everything not mentioned in packages `public_api.ts` now private so direct imports from `@nebular/theme/*` will stop working.
+* everything not mentioned in packages `public_api.ts` now private so direct imports from `@commudle/theme/*` will stop working.
 * [Properties changed in Nebular 4.0.0](https://github.com/akveo/nebular/tree/master/src/framework/theme/350-400-properties-changes.md)
 * [Theme variables change in Nebular 4.0.0](https://github.com/akveo/nebular/tree/master/src/framework/theme/350-400-theme-variables-changes.md)
 * [Components variables changes in Nebular 4.0.0](https://github.com/akveo/nebular/tree/master/src/framework/theme/350-400-component-variables-changes.md)
@@ -944,11 +970,11 @@ Now all Nebular components internally use `<nb-icon></nb-icon>` component utiliz
 There are two ways to upgrade:
 **Migrate to Eva Icons** (recommended):
 
-1. install Eva Icons Nebular package `npm i @nebular/eva-icons`
+1. install Eva Icons Nebular package `npm i @commudle/eva-icons`
 2. register `NbEvaIconsModule` in the `app.module.ts`
 
 ```
-import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbEvaIconsModule } from '@commudle/eva-icons';
 
 @NgModule({
   imports: [
@@ -972,7 +998,7 @@ This option is also possible, but please note, Nebular Component will still use 
 1. Register nebular-icons as a pack for Nebular in your `app.component.ts`
 
 ```
-  import { NbIconLibraries } from '@nebular/theme';
+  import { NbIconLibraries } from '@commudle/theme';
 
   constructor(private iconLibraries: NbIconLibraries) {
     this.iconLibraries.registerFontPack('nebular', { iconClassPrefix: 'nb' });
@@ -1236,7 +1262,7 @@ Nebular 2.0 is stable now! After 10 release candidates and a year of work we fin
 - **button:** fix outline button ([0bcad95](https://github.com/akveo/nebular/commit/0bcad95))
 - **calendar:** use nbButton in calendar navigation ([#837](https://github.com/akveo/nebular/issues/837)) ([f460f85](https://github.com/akveo/nebular/commit/f460f85)), closes [#827](https://github.com/akveo/nebular/issues/827)
 - **checkbox, radio:** check mark positioning in IE ([#830](https://github.com/akveo/nebular/issues/830)) ([ac52315](https://github.com/akveo/nebular/commit/ac52315)), closes [#743](https://github.com/akveo/nebular/issues/743)
-- **docs:**  fix warning `Invalid value for $grid-breakpoints..` ([#736](https://github.com/akveo/nebular/issues/736)) ([23e7804](https://github.com/akveo/nebular/commit/23e7804))
+- **docs:** fix warning `Invalid value for $grid-breakpoints..` ([#736](https://github.com/akveo/nebular/issues/736)) ([23e7804](https://github.com/akveo/nebular/commit/23e7804))
 - **docs:** add radio icon ([#748](https://github.com/akveo/nebular/issues/748)) ([9110266](https://github.com/akveo/nebular/commit/9110266))
 - **docs:** fix mention of angular-cli.json file to `angular.json` ([#701](https://github.com/akveo/nebular/issues/701)) ([3211c54](https://github.com/akveo/nebular/commit/3211c54))
 - **e2e:** add redundance note in protractor.conf.ci.js ([#839](https://github.com/akveo/nebular/issues/839)) ([a7ed638](https://github.com/akveo/nebular/commit/a7ed638))
@@ -1260,7 +1286,7 @@ Nebular 2.0 is stable now! After 10 release candidates and a year of work we fin
 - **menu:** replace item click ReplaySubject with plain Subject ([#724](https://github.com/akveo/nebular/issues/724)) ([eb6e74b](https://github.com/akveo/nebular/commit/eb6e74b)), closes [#695](https://github.com/akveo/nebular/issues/695)
 - **theme:** refactor popover, context-menu and search components to use overlays ([#684](https://github.com/akveo/nebular/issues/684)) ([d3ba6ab](https://github.com/akveo/nebular/commit/d3ba6ab)), closes [#683](https://github.com/akveo/nebular/issues/683) [#664](https://github.com/akveo/nebular/issues/664) [#668](https://github.com/akveo/nebular/issues/668)
 - **theme:** remove angular2-toaster styling ([#721](https://github.com/akveo/nebular/issues/721)) ([026974e](https://github.com/akveo/nebular/commit/026974e))
-- **theme:** separate bootstrap styles into [@nebular](https://github.com/nebular)/bootstrap ([#707](https://github.com/akveo/nebular/issues/707)) ([a25f615](https://github.com/akveo/nebular/commit/a25f615)), closes [#230](https://github.com/akveo/nebular/issues/230)
+- **theme:** separate bootstrap styles into [@commudle](https://github.com/nebular)/bootstrap ([#707](https://github.com/akveo/nebular/issues/707)) ([a25f615](https://github.com/akveo/nebular/commit/a25f615)), closes [#230](https://github.com/akveo/nebular/issues/230)
 
 ### Features
 
@@ -1293,13 +1319,13 @@ Nebular 2.0 is stable now! After 10 release candidates and a year of work we fin
 
 This release has introduced a number of changes which may required some manual update steps, depending on your setup:
 
-1. In case if you use Nebular overrides of bootstrap styles - you need to manually install new `@nebular/bootstrap` package. To do that:
+1. In case if you use Nebular overrides of bootstrap styles - you need to manually install new `@commudle/bootstrap` package. To do that:
 
-- install Nebular Bootstrap `npm i @nebular/bootstrap`
+- install Nebular Bootstrap `npm i @commudle/bootstrap`
 - then add it into your `styles.scss`
 
 ```
-@import '~@nebular/bootstrap/styles/globals';
+@import '~@commudle/bootstrap/styles/globals';
 // ...
 
 @include nb-install() {
@@ -1308,8 +1334,8 @@ This release has introduced a number of changes which may required some manual u
 }
 ```
 
-- if you import `~@nebular/theme/styles/global/bootstrap/breakpoints` in your code, replace it with `~@nebular/theme/styles/global/breakpoints`
-- if you import `~@nebular/theme/styles/global/bootstrap/*.scss` somewhere in your code, replace it with `~@nebular/bootstrap/styles/*.scss`
+- if you import `~@commudle/theme/styles/global/bootstrap/breakpoints` in your code, replace it with `~@commudle/theme/styles/global/breakpoints`
+- if you import `~@commudle/theme/styles/global/bootstrap/*.scss` somewhere in your code, replace it with `~@commudle/bootstrap/styles/*.scss`
 
 2. Nebular 2.0 introduced a new peer dependency - @angular/cdk. A lot of out of the box functionality provided by @angular team gives our components a solid foundation. To do that:
 
@@ -1327,14 +1353,14 @@ Here's a list of other possibly breaking changes that you may need to take into 
   Inject `NbToastrService` into the required component.
   call `NbToastrService.show(...)` to render toasts.
   For more information check [toastr documentation](https://akveo.github.io/nebular/docs/components/toastr).
-- **theme:** All bootstrap override styles were moved from the @nebular/theme package to the new @nebular/bootstrap package. If you don't need bootstrap support you can simply no use this package.
-  @nebular/theme package introduced a dependency of normalize.css. To update:
+- **theme:** All bootstrap override styles were moved from the @commudle/theme package to the new @commudle/bootstrap package. If you don't need bootstrap support you can simply no use this package.
+  @commudle/theme package introduced a dependency of normalize.css. To update:
 
-  - install Nebular Bootstrap `npm i @nebular/bootstrap`
+  - install Nebular Bootstrap `npm i @commudle/bootstrap`
   - then add it into your `styles.scss`
 
   ```scss
-  @import '~@nebular/bootstrap/styles/globals';
+  @import '~@commudle/bootstrap/styles/globals';
   // ...
 
   @include nb-install() {
