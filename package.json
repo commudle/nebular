@@ -3,12 +3,14 @@
   "version": "11.0.1",
   "license": "MIT",
   "author": "Commudle <more@commudle.com>",
-  "private": true,
   "bugs": {
     "url": "https://github.com/commudle/nebular/issues"
   },
   "homepage": "https://github.com/commudle/nebular#readme",
-  "repository": "git+https://github.com/commudle/nebular.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commudle/nebular.git"
+  },
   "scripts": {
     "ng": "ng",
     "prestart": "npm run gen:playground",
