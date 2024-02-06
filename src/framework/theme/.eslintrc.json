@@ -31,7 +31,8 @@
             "prefix": "nb",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@angular-eslint/no-input-rename": "warn"
       }
     },
     {

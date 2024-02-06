@@ -30,7 +30,7 @@ export class NbOverlayTestComponent implements OnInit {
 @NgModule({
   imports: [NbOverlayModule.forRoot()],
   declarations: [NbOverlayContainerTestComponent, NbOverlayTestComponent],
-  entryComponents: [NbOverlayTestComponent],
+
 })
 export class NbOverlayTestModule {}
 
