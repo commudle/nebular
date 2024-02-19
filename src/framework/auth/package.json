@@ -1,6 +1,6 @@
 {
   "name": "@commudle/auth",
-  "version": "12.0.0",
+  "version": "12.0.1",
   "description": "@commudle/auth",
   "author": "akveo",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "@angular/core": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@angular/forms": "^16.0.0",
-    "@commudle/theme": "12.0.0",
+    "@commudle/theme": "12.0.1",
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "dependencies": {

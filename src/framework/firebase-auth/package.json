@@ -1,6 +1,6 @@
 {
   "name": "@commudle/firebase-auth",
-  "version": "12.0.0",
+  "version": "12.0.1",
   "description": "@commudle/firebase-auth",
   "author": "akveo",
   "license": "MIT",
@@ -26,7 +26,7 @@
   ],
   "peerDependencies": {
     "@angular/core": "^16.0.0",
-    "@commudle/auth": "12.0.0",
+    "@commudle/auth": "12.0.1",
     "rxjs": "^6.5.3 || ^7.4.0",
     "firebase": "^9.4.0",
     "@angular/fire": "^7.4.1"

@@ -14,9 +14,10 @@ import {
 } from '@angular/cdk/schematics';
 import { ProjectDefinition } from '@angular-devkit/core/src/workspace';
 import { normalize } from '@angular-devkit/core';
+import { getAppModulePath } from '@schematics/angular/utility/ng-ast-utils';
 
 import { Schema } from '../schema';
-import { getAppModulePath, getProject, isImportedInMainModule } from '../../util';
+import { getProject, isImportedInMainModule } from '../../util';
 import { appRoutingModuleContent } from './app-routing-module-content';
 
 export function registerModules(options: Schema): Rule {
