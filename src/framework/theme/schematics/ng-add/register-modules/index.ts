@@ -14,22 +14,18 @@ import {
 } from '@angular/cdk/schematics';
 import { ProjectDefinition } from '@angular-devkit/core/src/workspace';
 import { normalize } from '@angular-devkit/core';
+import { getAppModulePath } from '@schematics/angular/utility/ng-ast-utils';
 
 import { Schema } from '../schema';
-import { getAppModulePath, getProject, isImportedInMainModule } from '../../util';
+import { getProject, isImportedInMainModule } from '../../util';
 import { appRoutingModuleContent } from './app-routing-module-content';
-
 
 export function registerModules(options: Schema): Rule {
   if (!options.theme) {
     options.theme = 'default';
   }
 
-  return chain([
-    registerAnimationsModule(options),
-    registerNebularModules(options),
-    registerRouterIfNeeded(options),
-  ]);
+  return chain([registerAnimationsModule(options), registerNebularModules(options), registerRouterIfNeeded(options)]);
 }
 
 function registerAnimationsModule(options: Schema) {
@@ -46,9 +42,11 @@ function registerAnimationsModule(options: Schema) {
       // animations. If we would add the BrowserAnimationsModule while the NoopAnimationsModule
       // is already configured, we would cause unexpected behavior and runtime exceptions.
       if (hasNgModuleImport(tree, appModulePath, noopAnimationsModuleName)) {
-        return context.logger.warn(`\u001b[31mCould not set up "${browserAnimationsModuleName}" ` +
-          `because "${noopAnimationsModuleName}" is already imported. Please manually ` +
-          `set up browser animations.`);
+        return context.logger.warn(
+          `\u001b[31mCould not set up "${browserAnimationsModuleName}" ` +
+            `because "${noopAnimationsModuleName}" is already imported. Please manually ` +
+            `set up browser animations.`,
+        );
       }
 
       addModuleImportToRootModule(tree, browserAnimationsModuleName, animationsPackage, project);
@@ -57,7 +55,7 @@ function registerAnimationsModule(options: Schema) {
       // the BrowserAnimationsModule.
       addModuleImportToRootModule(tree, noopAnimationsModuleName, animationsPackage, project);
     }
-  }
+  };
 }
 
 function registerNebularModules(options: Schema): Rule {
@@ -65,10 +63,10 @@ function registerNebularModules(options: Schema): Rule {
     const project = await getProject(tree, options.project);
     const nebularThemeModule = `NbThemeModule.forRoot({ name: '${options.theme}' })`;
 
-    addModuleImportToRootModule(tree, nebularThemeModule, '@nebular/theme', project);
-    addModuleImportToRootModule(tree, 'NbLayoutModule', '@nebular/theme', project);
-    addModuleImportToRootModule(tree, 'NbEvaIconsModule', '@nebular/eva-icons', project);
-  }
+    addModuleImportToRootModule(tree, nebularThemeModule, '@commudle/theme', project);
+    addModuleImportToRootModule(tree, 'NbLayoutModule', '@commudle/theme', project);
+    addModuleImportToRootModule(tree, 'NbEvaIconsModule', '@commudle/eva-icons', project);
+  };
 }
 
 /**
@@ -82,7 +80,7 @@ function registerRouterIfNeeded(options: Schema): Rule {
     if (shouldRegisterRouter(tree, project)) {
       await registerRoutingModule(tree, options.project);
     }
-  }
+  };
 }
 
 /**

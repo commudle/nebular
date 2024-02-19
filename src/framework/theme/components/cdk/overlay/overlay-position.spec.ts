@@ -15,7 +15,7 @@ import {
   NbAdjustment,
   NbViewportRulerAdapter,
   NbLayoutDirectionService,
-} from '@nebular/theme';
+} from '@commudle/theme';
 
 @Injectable()
 export class MockViewportRulerAdapter extends NbViewportRulerAdapter {
@@ -32,7 +32,6 @@ export class PortalComponent {}
 @NgModule({
   declarations: [PortalComponent],
   exports: [PortalComponent],
-  entryComponents: [PortalComponent],
 })
 export class PortalModule {}
 

@@ -5,7 +5,7 @@
  */
 
 import { Component, OnDestroy } from '@angular/core';
-import { NbAuthOAuth2Token, NbAuthResult, NbAuthService, NbAuthToken } from '@nebular/auth';
+import { NbAuthOAuth2Token, NbAuthResult, NbAuthService, NbAuthToken } from '@commudle/auth';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 

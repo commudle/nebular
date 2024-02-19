@@ -17,7 +17,7 @@ import {
   NbComponentStatus,
   NbButtonToggleAppearance,
   NbThemeModule,
-} from '@nebular/theme';
+} from '@commudle/theme';
 
 @Component({
   selector: 'nb-button-group-test',

@@ -6,7 +6,7 @@
 
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NbButtonModule, NbCardModule, NbDatepickerModule, NbInputModule, NbTimepickerModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbDatepickerModule, NbInputModule, NbTimepickerModule } from '@commudle/theme';
 import { DatepickerRoutingModule } from './datepicker-routing.module';
 import { DatepickerFormsComponent } from './datepicker-forms.component';
 import { DatepickerShowcaseComponent } from './datepicker-showcase.component';
@@ -15,19 +15,12 @@ import { RangepickerShowcaseComponent } from './rangepicker-showcase.component';
 import { DateTimepickerShowcaseComponent } from './date-timepicker-showcase.component';
 import { DateTimepickerSingleColumnComponent } from './date-timepicker-single-column.component';
 import { DatepickerFilterComponent } from './datepicker-filter.component';
-import { DateTimepickerDynamicInputsShowcaseComponent } from './date-timepicker-dynamic-inputs-showcase.component';
-import { NbDateFnsDateModule } from '@nebular/date-fns';
-import { DatepickerDynamicInputsShowcaseComponent } from './datepicker-dynamic-inputs-showcase.component';
-import { RangepickerDynamicInputsShowcaseComponent } from './rangepicker-dynamic-inputs-showcase.component';
 
 @NgModule({
   declarations: [
     DatepickerFormsComponent,
     DatepickerShowcaseComponent,
     DateTimepickerShowcaseComponent,
-    DateTimepickerDynamicInputsShowcaseComponent,
-    DatepickerDynamicInputsShowcaseComponent,
-    RangepickerDynamicInputsShowcaseComponent,
     DateTimepickerSingleColumnComponent,
     DatepickerValidationComponent,
     RangepickerShowcaseComponent,
@@ -42,7 +35,6 @@ import { RangepickerDynamicInputsShowcaseComponent } from './rangepicker-dynamic
     DatepickerRoutingModule,
     NbCardModule,
     NbButtonModule,
-    NbDateFnsDateModule.forRoot({}),
   ],
 })
 export class DatepickerModule {}

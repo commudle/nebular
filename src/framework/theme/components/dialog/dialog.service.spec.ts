@@ -9,7 +9,7 @@ import {
   NbDialogModule,
   NbThemeModule,
   NB_DOCUMENT,
-} from '@nebular/theme';
+} from '@commudle/theme';
 
 @Injectable()
 export class NbViewportRulerMockAdapter extends NbViewportRulerAdapter {
@@ -26,7 +26,6 @@ class NbTestDialogComponent {}
 
 @NgModule({
   declarations: [NbTestDialogComponent],
-  entryComponents: [NbTestDialogComponent],
 })
 class NbTestDialogModule {}
 
