@@ -1,21 +1,28 @@
 {
   "extends": "../../../.eslintrc.json",
-  "ignorePatterns": [
-    "!**/*"
-  ],
+  "ignorePatterns": ["!**/*"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "src/framework/theme/tsconfig.lib.json",
-          "src/framework/theme/tsconfig.spec.json"
-        ],
+        "project": ["src/framework/theme/tsconfig.lib.json", "src/framework/theme/tsconfig.spec.json"],
         "createDefaultProgram": true
       },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "eslint-config-prettier"
+      ],
+      "plugins": ["@typescript-eslint"],
       "rules": {
+        "quotes": "off",
+        "dot-notation": "off",
+        "no-restricted-globals": ["error", "fit", "fdescribe"],
+        "@typescript-eslint/dot-notation": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": "error",
+        "no-underscore-dangle": "off",
+        "@typescript-eslint/consistent-type-definitions": "error",
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -36,9 +43,7 @@
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
+      "files": ["*.html"],
       "rules": {}
     }
   ]

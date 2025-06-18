@@ -4,7 +4,7 @@
  * Licensed under the MIT License. See License.txt in the project root for license infornbion.
  */
 
-import { Directive, ElementRef, InjectionToken, Input } from '@angular/core';
+import { Directive, ElementRef, HostBinding, InjectionToken, Input } from '@angular/core';
 import {
   CdkCell,
   CdkCellDef,
@@ -24,8 +24,7 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
   selector: '[nbCellDef]',
   providers: [{ provide: CdkCellDef, useExisting: NbCellDefDirective }],
 })
-export class NbCellDefDirective extends CdkCellDef {
-}
+export class NbCellDefDirective extends CdkCellDef {}
 
 /**
  * Header cell definition for the nb-table.
@@ -35,8 +34,7 @@ export class NbCellDefDirective extends CdkCellDef {
   selector: '[nbHeaderCellDef]',
   providers: [{ provide: CdkHeaderCellDef, useExisting: NbHeaderCellDefDirective }],
 })
-export class NbHeaderCellDefDirective extends CdkHeaderCellDef {
-}
+export class NbHeaderCellDefDirective extends CdkHeaderCellDef {}
 
 /**
  * Footer cell definition for the nb-table.
@@ -46,8 +44,7 @@ export class NbHeaderCellDefDirective extends CdkHeaderCellDef {
   selector: '[nbFooterCellDef]',
   providers: [{ provide: CdkFooterCellDef, useExisting: NbFooterCellDefDirective }],
 })
-export class NbFooterCellDefDirective extends CdkFooterCellDef {
-}
+export class NbFooterCellDefDirective extends CdkFooterCellDef {}
 
 export const NB_SORT_HEADER_COLUMN_DEF = new InjectionToken('NB_SORT_HEADER_COLUMN_DEF');
 
@@ -73,7 +70,13 @@ export class NbColumnDefDirective extends CdkColumnDef {
   }
 
   /** Whether this column should be sticky positioned at the start of the row */
-  @Input() sticky: boolean;
+  @Input()
+  get sticky(): boolean {
+    return super.sticky;
+  }
+  set sticky(value: boolean) {
+    super.sticky = value;
+  }
 
   /** Whether this column should be sticky positioned on the end of the row */
   @Input()
@@ -81,23 +84,19 @@ export class NbColumnDefDirective extends CdkColumnDef {
     return this._stickyEnd;
   }
   set stickyEnd(value: boolean) {
-    const prevValue = this._stickyEnd;
     this._stickyEnd = coerceBooleanProperty(value);
-    this._hasStickyChanged = prevValue !== this._stickyEnd;
   }
 }
 
 /** Header cell template container that adds the right classes and role. */
 @Directive({
   selector: 'nb-header-cell, th[nbHeaderCell]',
-  host: {
-    'class': 'nb-header-cell',
-    'role': 'columnheader',
-  },
 })
 export class NbHeaderCellDirective extends CdkHeaderCell {
-  constructor(columnDef: NbColumnDefDirective,
-              elementRef: ElementRef<HTMLElement>) {
+  @HostBinding('class.nb-header-cell') readonly headerCellClass = true;
+  @HostBinding('attr.role') readonly role = 'columnheader';
+
+  constructor(columnDef: NbColumnDefDirective, elementRef: ElementRef<HTMLElement>) {
     super(columnDef, elementRef);
     elementRef.nativeElement.classList.add(`nb-column-${columnDef.cssClassFriendlyName}`);
   }
@@ -106,14 +105,12 @@ export class NbHeaderCellDirective extends CdkHeaderCell {
 /** Footer cell template container that adds the right classes and role. */
 @Directive({
   selector: 'nb-footer-cell, td[nbFooterCell]',
-  host: {
-    'class': 'nb-footer-cell',
-    'role': 'gridcell',
-  },
 })
 export class NbFooterCellDirective extends CdkFooterCell {
-  constructor(columnDef: NbColumnDefDirective,
-              elementRef: ElementRef) {
+  @HostBinding('class.nb-footer-cell') readonly footerCellClass = true;
+  @HostBinding('attr.role') readonly role = 'gridcell';
+
+  constructor(columnDef: NbColumnDefDirective, elementRef: ElementRef) {
     super(columnDef, elementRef);
     elementRef.nativeElement.classList.add(`nb-column-${columnDef.cssClassFriendlyName}`);
   }
@@ -122,14 +119,12 @@ export class NbFooterCellDirective extends CdkFooterCell {
 /** Cell template container that adds the right classes and role. */
 @Directive({
   selector: 'nb-cell, td[nbCell]',
-  host: {
-    'class': 'nb-cell',
-    'role': 'gridcell',
-  },
 })
 export class NbCellDirective extends CdkCell {
-  constructor(columnDef: NbColumnDefDirective,
-              elementRef: ElementRef<HTMLElement>) {
+  @HostBinding('class.nb-cell') readonly cellClass = true;
+  @HostBinding('attr.role') readonly role = 'gridcell';
+
+  constructor(columnDef: NbColumnDefDirective, elementRef: ElementRef<HTMLElement>) {
     super(columnDef, elementRef);
     elementRef.nativeElement.classList.add(`nb-column-${columnDef.cssClassFriendlyName}`);
   }
