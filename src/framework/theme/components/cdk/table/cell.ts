@@ -4,7 +4,7 @@
  * Licensed under the MIT License. See License.txt in the project root for license infornbion.
  */
 
-import { Directive, ElementRef, HostBinding, InjectionToken, Input } from '@angular/core';
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import {
   CdkCell,
   CdkCellDef,
@@ -14,7 +14,7 @@ import {
   CdkHeaderCell,
   CdkHeaderCellDef,
 } from '@angular/cdk/table';
-import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { Directive, ElementRef, HostBinding, InjectionToken, Input } from '@angular/core';
 
 /**
  * Cell definition for the nb-table.
@@ -60,11 +60,15 @@ export const NB_SORT_HEADER_COLUMN_DEF = new InjectionToken('NB_SORT_HEADER_COLU
   ],
 })
 export class NbColumnDefDirective extends CdkColumnDef {
+  private _hasStickyCellChanged = false;
+  private _stickyCell = false;
+
   /** Unique name for this column. */
   @Input('nbColumnDef')
   get name(): string {
     return this._name;
   }
+
   set name(value: string) {
     this._setNameInput(value);
   }
@@ -72,10 +76,14 @@ export class NbColumnDefDirective extends CdkColumnDef {
   /** Whether this column should be sticky positioned at the start of the row */
   @Input()
   get sticky(): boolean {
-    return super.sticky;
+    return this._stickyCell;
   }
+
   set sticky(value: boolean) {
-    super.sticky = value;
+    if (value !== this._stickyCell) {
+      this._stickyCell = value;
+      this._hasStickyCellChanged = true;
+    }
   }
 
   /** Whether this column should be sticky positioned on the end of the row */
@@ -83,14 +91,32 @@ export class NbColumnDefDirective extends CdkColumnDef {
   get stickyEnd(): boolean {
     return this._stickyEnd;
   }
+
   set stickyEnd(value: boolean) {
     this._stickyEnd = coerceBooleanProperty(value);
+    this._hasStickyCellChanged = value !== this._stickyEnd;
+  }
+
+  /** Whether the sticky state has changed. */
+  hasStickyChanged(): boolean {
+    const hasStickyChanged = this._hasStickyCellChanged;
+    this.resetStickyChanged();
+    return hasStickyChanged;
+  }
+
+  /** Resets the sticky changed state. */
+  resetStickyChanged(): void {
+    this._hasStickyCellChanged = false;
   }
 }
 
 /** Header cell template container that adds the right classes and role. */
 @Directive({
   selector: 'nb-header-cell, th[nbHeaderCell]',
+  host: {
+    class: 'nb-header-cell',
+    role: 'columnheader',
+  },
 })
 export class NbHeaderCellDirective extends CdkHeaderCell {
   @HostBinding('class.nb-header-cell') readonly headerCellClass = true;
@@ -105,6 +131,10 @@ export class NbHeaderCellDirective extends CdkHeaderCell {
 /** Footer cell template container that adds the right classes and role. */
 @Directive({
   selector: 'nb-footer-cell, td[nbFooterCell]',
+  host: {
+    class: 'nb-footer-cell',
+    role: 'gridcell',
+  },
 })
 export class NbFooterCellDirective extends CdkFooterCell {
   @HostBinding('class.nb-footer-cell') readonly footerCellClass = true;
@@ -119,6 +149,10 @@ export class NbFooterCellDirective extends CdkFooterCell {
 /** Cell template container that adds the right classes and role. */
 @Directive({
   selector: 'nb-cell, td[nbCell]',
+  host: {
+    class: 'nb-cell',
+    role: 'gridcell',
+  },
 })
 export class NbCellDirective extends CdkCell {
   @HostBinding('class.nb-cell') readonly cellClass = true;

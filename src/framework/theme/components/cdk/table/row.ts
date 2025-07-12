@@ -1,17 +1,17 @@
-import { Component, Directive, HostBinding, Input } from '@angular/core';
 import {
+  CdkCellOutlet,
   CdkFooterRow,
   CdkFooterRowDef,
   CdkHeaderRow,
   CdkHeaderRowDef,
   CdkRow,
   CdkRowDef,
-  CdkCellOutlet,
   DataRowOutlet,
-  HeaderRowOutlet,
   FooterRowOutlet,
+  HeaderRowOutlet,
   NoDataRowOutlet,
 } from '@angular/cdk/table';
+import { Component, Directive, HostBinding, Input } from '@angular/core';
 
 @Directive({
   selector: '[nbRowOutlet]',
@@ -53,13 +53,30 @@ export class NbCellOutletDirective extends CdkCellOutlet {}
 })
 export class NbHeaderRowDefDirective extends CdkHeaderRowDef {
   @Input('nbHeaderRowDef') columns: Iterable<string>;
+  private _hasStickyRowChanged = false;
+  private _stickyRow = false;
 
   @Input('nbHeaderRowDefSticky')
   get sticky(): boolean {
-    return super.sticky;
+    return this._stickyRow;
   }
+
   set sticky(value: boolean) {
-    super.sticky = value;
+    if (value !== this._stickyRow) {
+      this._stickyRow = value;
+      this._hasStickyRowChanged = true;
+    }
+  }
+
+  hasStickyChanged(): boolean {
+    const hasStickyChanged = this._hasStickyRowChanged;
+    this.resetStickyChanged();
+    return hasStickyChanged;
+  }
+
+  /** Resets the sticky changed state. */
+  resetStickyChanged(): void {
+    this._hasStickyRowChanged = false;
   }
 }
 
@@ -73,13 +90,31 @@ export class NbHeaderRowDefDirective extends CdkHeaderRowDef {
 })
 export class NbFooterRowDefDirective extends CdkFooterRowDef {
   @Input('nbFooterRowDef') columns: Iterable<string>;
+  private _hasStickyRowChanged = false;
+  private _stickyRow = false;
 
   @Input('nbFooterRowDefSticky')
   get sticky(): boolean {
-    return super.sticky;
+    return this._stickyRow;
   }
+
   set sticky(value: boolean) {
-    super.sticky = value;
+    if (value !== this._stickyRow) {
+      this._stickyRow = value;
+      this._hasStickyRowChanged = true;
+    }
+  }
+
+  /** Whether the sticky state has changed. */
+  hasStickyChanged(): boolean {
+    const hasStickyChanged = this._hasStickyRowChanged;
+    this.resetStickyChanged();
+    return hasStickyChanged;
+  }
+
+  /** Resets the sticky changed state. */
+  resetStickyChanged(): void {
+    this._hasStickyRowChanged = false;
   }
 }
 
@@ -101,6 +136,10 @@ export class NbRowDefDirective<T> extends CdkRowDef<T> {
 @Component({
   selector: 'nb-header-row, tr[nbHeaderRow]',
   template: ` <ng-container nbCellOutlet></ng-container>`,
+  host: {
+    class: 'nb-header-row',
+    role: 'row',
+  },
   providers: [{ provide: CdkHeaderRow, useExisting: NbHeaderRowComponent }],
 })
 export class NbHeaderRowComponent extends CdkHeaderRow {
@@ -112,6 +151,10 @@ export class NbHeaderRowComponent extends CdkHeaderRow {
 @Component({
   selector: 'nb-footer-row, tr[nbFooterRow]',
   template: ` <ng-container nbCellOutlet></ng-container>`,
+  host: {
+    class: 'nb-footer-row',
+    role: 'row',
+  },
   providers: [{ provide: CdkFooterRow, useExisting: NbFooterRowComponent }],
 })
 export class NbFooterRowComponent extends CdkFooterRow {
@@ -123,6 +166,10 @@ export class NbFooterRowComponent extends CdkFooterRow {
 @Component({
   selector: 'nb-row, tr[nbRow]',
   template: ` <ng-container nbCellOutlet></ng-container>`,
+  host: {
+    class: 'nb-row',
+    role: 'row',
+  },
   providers: [{ provide: CdkRow, useExisting: NbRowComponent }],
 })
 export class NbRowComponent extends CdkRow {
