@@ -2,8 +2,8 @@ import { Component, HostBinding } from '@angular/core';
 import { NbToastrService } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-toastr-destroy-by-click',
-  template: `
+    selector: 'nb-toastr-destroy-by-click',
+    template: `
     <button nbButton (click)="showToast(true)">Destroy by click</button>
     <button nbButton (click)="showToast(false)">Destroy by timeout only</button>
   `,
@@ -13,7 +13,8 @@ import { NbToastrService } from '@commudle/theme';
         height: 80vw;
       }
     `,
-  ],
+    ],
+    standalone: false
 })
 export class ToastrDestroyByClickComponent {
   private index: number = 0;

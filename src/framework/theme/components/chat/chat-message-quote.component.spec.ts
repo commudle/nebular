@@ -3,8 +3,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NbChatModule, NbThemeModule } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-chat-message-quote-test',
-  template: `
+    selector: 'nb-chat-message-quote-test',
+    template: `
     <nb-chat-message-quote
       [sender]="sender"
       [date]="date"
@@ -14,6 +14,7 @@ import { NbChatModule, NbThemeModule } from '@commudle/theme';
     >
     </nb-chat-message-quote>
   `,
+    standalone: false
 })
 export class NbChatMessageQuoteTestComponent {
   sender: string;

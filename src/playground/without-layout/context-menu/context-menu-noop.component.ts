@@ -8,9 +8,9 @@ import { Component, ViewChild } from '@angular/core';
 import { NbContextMenuDirective } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-context-menu-noop',
-  templateUrl: './context-menu-noop.component.html',
-  styles: [
+    selector: 'nb-context-menu-noop',
+    templateUrl: './context-menu-noop.component.html',
+    styles: [
     `
       :host nb-layout-column {
         height: 50vw;
@@ -24,6 +24,7 @@ import { NbContextMenuDirective } from '@commudle/theme';
       }
     `,
   ],
+    standalone: false
 })
 export class ContextMenuNoopComponent {
   @ViewChild(NbContextMenuDirective) contextMenu: NbContextMenuDirective;

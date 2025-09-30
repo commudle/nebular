@@ -2,8 +2,8 @@ import { Component, TemplateRef } from '@angular/core';
 import { NbDialogService } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-dialog-template',
-  template: `
+    selector: 'nb-dialog-template',
+    template: `
     <ng-template #dialog let-data let-ref="dialogRef">
       <nb-card>
         <nb-card-header>Template Dialog</nb-card-header>
@@ -15,7 +15,8 @@ import { NbDialogService } from '@commudle/theme';
     </ng-template>
     <button nbButton (click)="open(dialog)">Open Dialog</button>
   `,
-  styleUrls: ['./dialog-common.scss'],
+    styleUrls: ['./dialog-common.scss'],
+    standalone: false
 })
 export class DialogTemplateComponent {
   constructor(private dialogService: NbDialogService) {}

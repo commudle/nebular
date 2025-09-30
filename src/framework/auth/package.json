@@ -1,6 +1,6 @@
 {
   "name": "@commudle/auth",
-  "version": "14.0.2",
+  "version": "15.0.0",
   "description": "@commudle/auth",
   "author": "akveo",
   "license": "MIT",
@@ -24,11 +24,11 @@
     "nebular"
   ],
   "peerDependencies": {
-    "@angular/common": "^18.1.2",
-    "@angular/core": "^18.1.2",
-    "@angular/router": "^18.1.2",
-    "@angular/forms": "^18.1.2",
-    "@commudle/theme": "14.0.2",
+    "@angular/common": "^19.1.6",
+    "@angular/core": "^19.1.6",
+    "@angular/router": "^19.1.6",
+    "@angular/forms": "^19.1.6",
+    "@commudle/theme": "15.0.0",
     "rxjs": "^6.5.3 || ^7.4.0"
   },
   "dependencies": {

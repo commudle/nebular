@@ -12,7 +12,7 @@ import {
 } from '@commudle/theme';
 
 @Component({
-  template: `
+    template: `
     <nb-layout>
       <nb-layout-column>
         <nb-select [disabled]="selectDisabled">
@@ -23,6 +23,7 @@ import {
       </nb-layout-column>
     </nb-layout>
   `,
+    standalone: false
 })
 export class NbOptionGroupTestComponent {
   selectDisabled = false;

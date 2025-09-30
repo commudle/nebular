@@ -8,16 +8,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NbIconConfig } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-tabset-icon',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './tabset-icon.component.html',
-  styles: [
+    selector: 'nb-tabset-icon',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: './tabset-icon.component.html',
+    styles: [
     `
       :host nb-tab {
         padding: 1.25rem;
       }
     `,
   ],
+    standalone: false
 })
 export class TabsetIconComponent {
   bellIconConfig: NbIconConfig = { icon: 'bell-outline', pack: 'eva' };

@@ -8,8 +8,8 @@ import {
 } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-calendar-kit-month-cell',
-  template: `
+    selector: 'nb-calendar-kit-month-cell',
+    template: `
     <h4>{{ title }}</h4>
     <nb-calendar-day-picker
       [boundingMonths]="false"
@@ -19,7 +19,7 @@ import {
     >
     </nb-calendar-day-picker>
   `,
-  styles: [
+    styles: [
     `
       :host {
         flex: 1 0 auto;
@@ -27,6 +27,7 @@ import {
       }
     `,
   ],
+    standalone: false
 })
 export class CalendarKitMonthCellComponent
   extends NbCalendarDayPickerComponent<Date, Date>

@@ -2,8 +2,8 @@ import { Component, HostBinding } from '@angular/core';
 import { NbToastrService, NbComponentStatus } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-toastr-statuses',
-  template: `
+    selector: 'nb-toastr-statuses',
+    template: `
     <nb-card>
       <nb-card-body class="example-items-rows">
         <button nbButton status="basic" (click)="showToast('basic')">Basic</button>
@@ -22,7 +22,8 @@ import { NbToastrService, NbComponentStatus } from '@commudle/theme';
         height: 80vw;
       }
     `,
-  ],
+    ],
+    standalone: false
 })
 export class ToastrStatusesComponent {
   private index: number = 0;

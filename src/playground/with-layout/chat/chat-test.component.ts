@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 import { NbComponentSize } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-chat-test',
-  template: `
+    selector: 'nb-chat-test',
+    template: `
     <nb-chat *ngFor="let chat of chats" [size]="chat.size" [status]="chat.status">
       <nb-chat-message
         *ngFor="let msg of messages"
@@ -28,6 +28,7 @@ import { NbComponentSize } from '@commudle/theme';
       <nb-chat-form (send)="sendMessage($event)"> </nb-chat-form>
     </nb-chat>
   `,
+    standalone: false
 })
 export class ChatTestComponent {
   messages = [];

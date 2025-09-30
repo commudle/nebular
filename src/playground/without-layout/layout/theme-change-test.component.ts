@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 import { NbThemeService } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-change-theme-test',
-  template: `
+    selector: 'nb-change-theme-test',
+    template: `
     <nb-layout>
       <nb-layout-header fixed>
         <a href="#" class="navbar-brand">Akveo</a>
@@ -28,6 +28,7 @@ import { NbThemeService } from '@commudle/theme';
       <nb-layout-footer fixed> &copy; Akveo 2017 </nb-layout-footer>
     </nb-layout>
   `,
+    standalone: false
 })
 export class ThemeChangeTestComponent {
   currentTheme = 'default';

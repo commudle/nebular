@@ -6,7 +6,7 @@ import { NbListItemComponent, NbLayoutScrollService, NB_WINDOW } from '@commudle
 import { NewsService } from './news.service';
 
 @Component({
-  template: `
+    template: `
     <nb-card>
       <div [nbSpinner]="loadingPrevious"></div>
       <nb-list
@@ -29,8 +29,9 @@ import { NewsService } from './news.service';
       </nb-list>
     </nb-card>
   `,
-  styleUrls: ['infinite-news-list.component.scss'],
-  providers: [NewsService],
+    styleUrls: ['infinite-news-list.component.scss'],
+    providers: [NewsService],
+    standalone: false
 })
 export class InfiniteNewsListComponent implements OnInit, OnDestroy {
   news = [];

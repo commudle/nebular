@@ -1,6 +1,6 @@
 {
   "name": "@commudle/date-fns",
-  "version": "14.0.2",
+  "version": "15.0.0",
   "description": "@commudle/date-fns",
   "author": "akveo",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "nebular"
   ],
   "peerDependencies": {
-    "@commudle/theme": "14.0.2",
+    "@commudle/theme": "15.0.0",
     "date-fns": "^2.0.0"
   },
   "dependencies": {

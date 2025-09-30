@@ -2,8 +2,8 @@ import { Component, HostBinding } from '@angular/core';
 import { NbToastrService, NbIconConfig } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-toastr-icon',
-  template: `
+    selector: 'nb-toastr-icon',
+    template: `
     <button nbButton (click)="showDefaultIcon()">With icon</button>
     <button nbButton (click)="showToast('')">Without icon</button>
     <button nbButton (click)="showToast('headphones-outline')">Custom icon</button>
@@ -14,7 +14,8 @@ import { NbToastrService, NbIconConfig } from '@commudle/theme';
         height: 80vw;
       }
     `,
-  ],
+    ],
+    standalone: false
 })
 export class ToastrIconComponent {
   private index: number = 0;

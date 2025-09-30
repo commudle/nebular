@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NbDateService, NbCalendarRange } from '@commudle/theme';
 
 @Component({
-  template: `
+    template: `
     <nb-card>
       <nb-card-body>
         <div class="example-items-rows">
@@ -19,13 +19,14 @@ import { NbDateService, NbCalendarRange } from '@commudle/theme';
       </nb-card-body>
     </nb-card>
   `,
-  styles: [
+    styles: [
     `
       button {
         margin-bottom: 1rem;
       }
     `,
   ],
+    standalone: false
 })
 export class CalendarWeekNumberComponent {
   showWeekNumber = false;

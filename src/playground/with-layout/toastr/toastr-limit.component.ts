@@ -2,15 +2,16 @@ import { NbGlobalLogicalPosition, NbToastrService } from '@commudle/theme';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nb-toastr-limit',
-  template: ` <button nbButton (click)="showToast()">Show only 3 toasts</button> `,
-  styles: [
-    `
+    selector: 'nb-toastr-limit',
+    template: ` <button nbButton (click)="showToast()">Show only 3 toasts</button> `,
+    styles: [
+        `
       ::ng-deep nb-layout-column {
         height: 80vw;
       }
     `,
-  ],
+    ],
+    standalone: false
 })
 export class ToastrLimitComponent {
   constructor(private toastrService: NbToastrService) {}

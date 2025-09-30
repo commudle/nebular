@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 import { NbCalendarRange, NbDateService } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-calendar-range-showcase',
-  template: `
+    selector: 'nb-calendar-range-showcase',
+    template: `
     <nb-card>
       <nb-card-header>
         <h1 class="h5">Selected range: {{ range.start | date }} - {{ range.end | date }}</h1>
@@ -20,6 +20,7 @@ import { NbCalendarRange, NbDateService } from '@commudle/theme';
       </nb-card-body>
     </nb-card>
   `,
+    standalone: false
 })
 export class CalendarRangeShowcaseComponent {
   range: NbCalendarRange<Date>;

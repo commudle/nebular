@@ -8,9 +8,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NbMenuItem } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-menu-showcase',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './menu-showcase.component.html',
+    selector: 'nb-menu-showcase',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: './menu-showcase.component.html',
+    standalone: false
 })
 export class MenuShowcaseComponent {
   items: NbMenuItem[] = [
