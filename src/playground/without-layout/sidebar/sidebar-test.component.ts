@@ -9,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 import { NbSidebarService } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-sidebar-test',
-  styles: [
-    `
+    selector: 'nb-sidebar-test',
+    styles: [
+        `
       :host ::ng-deep nb-layout-column {
         background-color: #76ecff;
       }
     `,
-  ],
-  template: `
+    ],
+    template: `
     <nb-layout>
       <nb-layout-header fixed>
         <a href="#" class="navbar-brand">Akveo</a>
@@ -46,6 +46,7 @@ import { NbSidebarService } from '@commudle/theme';
       <nb-layout-footer fixed> &copy; Akveo 2017 </nb-layout-footer>
     </nb-layout>
   `,
+    standalone: false
 })
 export class SidebarTestComponent implements OnInit {
   content = 'First ';

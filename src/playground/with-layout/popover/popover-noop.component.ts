@@ -8,9 +8,9 @@ import { Component, ViewChild } from '@angular/core';
 import { NbPopoverDirective } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-popover-noop',
-  templateUrl: './popover-noop.component.html',
-  styles: [
+    selector: 'nb-popover-noop',
+    templateUrl: './popover-noop.component.html',
+    styles: [
     `
       button {
         margin-right: 1rem;
@@ -18,6 +18,7 @@ import { NbPopoverDirective } from '@commudle/theme';
       }
     `,
   ],
+    standalone: false
 })
 export class PopoverNoopComponent {
   @ViewChild(NbPopoverDirective) popover: NbPopoverDirective;

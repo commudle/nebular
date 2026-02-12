@@ -3,11 +3,12 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NbChatModule, NbThemeModule } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-chat-message-text-test',
-  template: `
+    selector: 'nb-chat-message-text-test',
+    template: `
     <nb-chat-message-text [sender]="sender" [date]="date" [dateFormat]="dateFormat" [message]="message">
     </nb-chat-message-text>
   `,
+    standalone: false
 })
 export class NbChatMessageTextTestComponent {
   sender: string;

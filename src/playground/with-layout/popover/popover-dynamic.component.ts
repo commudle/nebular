@@ -10,9 +10,10 @@ import { NbPopoverDirective, NbPosition, NbTrigger } from '@commudle/theme';
 import { PopoverListComponent, PopoverTabsComponent } from './components/dynamic.components';
 
 @Component({
-  selector: 'nb-popover-dynamic',
-  templateUrl: './popover-dynamic.component.html',
-  styleUrls: ['./popover-dynamic.scss'],
+    selector: 'nb-popover-dynamic',
+    templateUrl: './popover-dynamic.component.html',
+    styleUrls: ['./popover-dynamic.scss'],
+    standalone: false
 })
 export class PopoverDynamicComponent implements OnDestroy, AfterViewInit {
   @ViewChild(NbPopoverDirective) popover: NbPopoverDirective;

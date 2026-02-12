@@ -8,9 +8,9 @@ import { Component, HostListener, ViewChild } from '@angular/core';
 import { NbContextMenuDirective } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-context-menu-right-click',
-  templateUrl: './context-menu-right-click.component.html',
-  styles: [
+    selector: 'nb-context-menu-right-click',
+    templateUrl: './context-menu-right-click.component.html',
+    styles: [
     `
       button {
         margin-right: 1rem;
@@ -18,6 +18,7 @@ import { NbContextMenuDirective } from '@commudle/theme';
       }
     `,
   ],
+    standalone: false
 })
 export class ContextMenuRightClickComponent {
   @ViewChild(NbContextMenuDirective) contextMenu: NbContextMenuDirective;

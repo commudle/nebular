@@ -2,8 +2,8 @@ import { Component, HostBinding } from '@angular/core';
 import { NbToastrService } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-toastr-prevent-duplicates',
-  template: `
+    selector: 'nb-toastr-prevent-duplicates',
+    template: `
     <button nbButton (click)="showToast(true)">Prevent duplicates</button>
     <button nbButton (click)="showToast(false)">Without prevent duplicates</button>
   `,
@@ -13,7 +13,8 @@ import { NbToastrService } from '@commudle/theme';
         height: 80vw;
       }
     `,
-  ],
+    ],
+    standalone: false
 })
 export class ToastrPreventDuplicatesComponent {
   @HostBinding('class')

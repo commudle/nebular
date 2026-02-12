@@ -16,9 +16,10 @@ import { NgdPaginationService } from '../@theme/services';
 import { NbMediaBreakpoint } from '@commudle/theme';
 
 @Component({
-  selector: 'ngd-documentation',
-  templateUrl: './documentation.component.html',
-  styleUrls: ['./documentation.component.scss'],
+    selector: 'ngd-documentation',
+    templateUrl: './documentation.component.html',
+    styleUrls: ['./documentation.component.scss'],
+    standalone: false
 })
 export class NgdDocumentationComponent implements OnDestroy {
   menuItems: NbMenuItem[] = [];

@@ -7,7 +7,7 @@ import { NbListItemComponent, NbLayoutScrollService, NB_WINDOW, NbLayoutRulerSer
 import { NewsService } from './news.service';
 
 @Component({
-  template: `
+    template: `
     <nb-card>
       <nb-list
         nbInfiniteList
@@ -32,8 +32,9 @@ import { NewsService } from './news.service';
       </nb-list>
     </nb-card>
   `,
-  styleUrls: ['infinite-news-list.component.scss'],
-  providers: [NewsService],
+    styleUrls: ['infinite-news-list.component.scss'],
+    providers: [NewsService],
+    standalone: false
 })
 export class InfiniteListPlaceholdersComponent implements OnInit, OnDestroy {
   news = [];

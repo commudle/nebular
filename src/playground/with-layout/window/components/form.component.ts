@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NbWindowRef } from '@commudle/theme';
 
 @Component({
-  template: `
+    template: `
     <form class="form">
       <label for="subject">Subject:</label>
       <input nbInput id="subject" type="text" />
@@ -11,6 +11,7 @@ import { NbWindowRef } from '@commudle/theme';
       <textarea nbInput id="text"></textarea>
     </form>
   `,
+    standalone: false
 })
 export class FormComponent {
   constructor(public windowRef: NbWindowRef) {}

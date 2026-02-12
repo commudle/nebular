@@ -9,9 +9,10 @@ import { NbComponentShape, NbComponentSize, NbComponentStatus } from '@commudle/
 import { NbSelectAppearance } from '@commudle/theme';
 
 @Component({
-  selector: 'nb-select-interactive',
-  templateUrl: './select-interactive.component.html',
-  styleUrls: ['./select-interactive.component.scss'],
+    selector: 'nb-select-interactive',
+    templateUrl: './select-interactive.component.html',
+    styleUrls: ['./select-interactive.component.scss'],
+    standalone: false
 })
 export class SelectInteractiveComponent {
   singleSelectValue = '1';
