@@ -1,4 +1,4 @@
-import { Component, Directive, Input } from '@angular/core';
+import { Component, Directive, HostBinding, Input } from '@angular/core';
 import {
   CdkFooterRow,
   CdkFooterRowDef,
@@ -53,7 +53,14 @@ export class NbCellOutletDirective extends CdkCellOutlet {}
 })
 export class NbHeaderRowDefDirective extends CdkHeaderRowDef {
   @Input('nbHeaderRowDef') columns: Iterable<string>;
-  @Input('nbHeaderRowDefSticky') sticky: boolean;
+
+  @Input('nbHeaderRowDefSticky')
+  get sticky(): boolean {
+    return super.sticky;
+  }
+  set sticky(value: boolean) {
+    super.sticky = value;
+  }
 }
 
 /**
@@ -66,7 +73,14 @@ export class NbHeaderRowDefDirective extends CdkHeaderRowDef {
 })
 export class NbFooterRowDefDirective extends CdkFooterRowDef {
   @Input('nbFooterRowDef') columns: Iterable<string>;
-  @Input('nbFooterRowDefSticky') sticky: boolean;
+
+  @Input('nbFooterRowDefSticky')
+  get sticky(): boolean {
+    return super.sticky;
+  }
+  set sticky(value: boolean) {
+    super.sticky = value;
+  }
 }
 
 /**
@@ -86,41 +100,32 @@ export class NbRowDefDirective<T> extends CdkRowDef<T> {
 /** Footer template container that contains the cell outlet. Adds the right class and role. */
 @Component({
   selector: 'nb-header-row, tr[nbHeaderRow]',
-  template: `
-    <ng-container nbCellOutlet></ng-container>`,
-  host: {
-    'class': 'nb-header-row',
-    'role': 'row',
-  },
+  template: ` <ng-container nbCellOutlet></ng-container>`,
   providers: [{ provide: CdkHeaderRow, useExisting: NbHeaderRowComponent }],
 })
 export class NbHeaderRowComponent extends CdkHeaderRow {
+  @HostBinding('class.nb-header-row') readonly headerRowClass = true;
+  @HostBinding('attr.role') readonly role = 'row';
 }
 
 /** Footer template container that contains the cell outlet. Adds the right class and role. */
 @Component({
   selector: 'nb-footer-row, tr[nbFooterRow]',
-  template: `
-    <ng-container nbCellOutlet></ng-container>`,
-  host: {
-    'class': 'nb-footer-row',
-    'role': 'row',
-  },
+  template: ` <ng-container nbCellOutlet></ng-container>`,
   providers: [{ provide: CdkFooterRow, useExisting: NbFooterRowComponent }],
 })
 export class NbFooterRowComponent extends CdkFooterRow {
+  @HostBinding('class.nb-footer-row') readonly footerRowClass = true;
+  @HostBinding('attr.role') readonly role = 'row';
 }
 
 /** Data row template container that contains the cell outlet. Adds the right class and role. */
 @Component({
   selector: 'nb-row, tr[nbRow]',
-  template: `
-    <ng-container nbCellOutlet></ng-container>`,
-  host: {
-    'class': 'nb-row',
-    'role': 'row',
-  },
+  template: ` <ng-container nbCellOutlet></ng-container>`,
   providers: [{ provide: CdkRow, useExisting: NbRowComponent }],
 })
 export class NbRowComponent extends CdkRow {
+  @HostBinding('class.nb-row') readonly rowClass = true;
+  @HostBinding('attr.role') readonly role = 'row';
 }
