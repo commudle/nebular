@@ -1,6 +1,6 @@
 {
   "name": "@commudle/eva-icons",
-  "version": "13.0.0",
+  "version": "14.0.2",
   "description": "@commudle/eva-icons",
   "author": "akveo",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "eva-icons"
   ],
   "peerDependencies": {
-    "@commudle/theme": "13.0.0",
+    "@commudle/theme": "14.0.2",
     "eva-icons": "^1.1.3"
   },
   "dependencies": {
