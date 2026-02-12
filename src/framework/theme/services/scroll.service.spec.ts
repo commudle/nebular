@@ -9,7 +9,7 @@ import {
   NbThemeService,
   NbThemeModule,
   NB_WINDOW,
-} from '@nebular/theme';
+} from '@commudle/theme';
 
 let currentWindow;
 let fixture: ComponentFixture<ScrollTestComponent>;
@@ -59,11 +59,7 @@ class ScrollTestComponent {
 describe('NbScrollService', () => {
   beforeEach(() => {
     fixture = TestBed.configureTestingModule({
-      imports: [
-        RouterModule.forRoot([], { relativeLinkResolution: 'legacy' }),
-        NbThemeModule.forRoot(),
-        NbLayoutModule,
-      ],
+      imports: [RouterModule.forRoot([]), NbThemeModule.forRoot(), NbLayoutModule],
       providers: [NbLayoutScrollService, NbThemeService, { provide: APP_BASE_HREF, useValue: '/' }],
       declarations: [ScrollTestComponent],
     }).createComponent(ScrollTestComponent);
@@ -73,14 +69,12 @@ describe('NbScrollService', () => {
     fixture.detectChanges();
   });
 
-  beforeEach(
-    waitForAsync(
-      inject([NbLayoutScrollService, NB_WINDOW], (_scrollService, _window) => {
-        scrollService = _scrollService;
-        currentWindow = _window;
-      }),
-    ),
-  );
+  beforeEach(waitForAsync(
+    inject([NbLayoutScrollService, NB_WINDOW], (_scrollService, _window) => {
+      scrollService = _scrollService;
+      currentWindow = _window;
+    }),
+  ));
 
   afterEach(fakeAsync(() => {
     fixture.destroy();

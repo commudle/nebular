@@ -12,7 +12,7 @@ import {
   NbCalendarDayCellComponent,
   NbCalendarMonthModelService,
   NbCalendarKitModule,
-} from '@nebular/theme';
+} from '@commudle/theme';
 
 describe('Component: NbCalendarDayPicker', () => {
   let component: NbCalendarDayPickerComponent<Date, Date>;

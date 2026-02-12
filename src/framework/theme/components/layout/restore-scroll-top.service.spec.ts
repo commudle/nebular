@@ -2,7 +2,7 @@ import { ComponentFixture, fakeAsync, inject, TestBed, tick, waitForAsync } from
 import { RouterTestingModule } from '@angular/router/testing';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { NbRestoreScrollTopHelper } from '@nebular/theme';
+import { NbRestoreScrollTopHelper } from '@commudle/theme';
 
 let restoreHelper: NbRestoreScrollTopHelper;
 let router: Router;
@@ -48,14 +48,12 @@ describe('NbRestoreScrollTopHelper', () => {
     fixture.detectChanges();
   });
 
-  beforeEach(
-    waitForAsync(
-      inject([NbRestoreScrollTopHelper, Router], (_restoreHelper, _router) => {
-        restoreHelper = _restoreHelper;
-        router = _router;
-      }),
-    ),
-  );
+  beforeEach(waitForAsync(
+    inject([NbRestoreScrollTopHelper, Router], (_restoreHelper, _router) => {
+      restoreHelper = _restoreHelper;
+      router = _router;
+    }),
+  ));
 
   afterEach(fakeAsync(() => {
     fixture.destroy();

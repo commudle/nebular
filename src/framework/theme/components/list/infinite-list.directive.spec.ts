@@ -11,7 +11,7 @@ import {
   NbListModule,
   NbListComponent,
   NbInfiniteListDirective,
-} from '@nebular/theme';
+} from '@commudle/theme';
 
 const CONTENT_PADDING = 20;
 const CONTENT_HEIGHT = 10000 + CONTENT_PADDING;
@@ -92,12 +92,7 @@ class ScrollTestComponent {
 describe('Directive: NbScrollDirective', () => {
   beforeEach(() => {
     fixture = TestBed.configureTestingModule({
-      imports: [
-        RouterModule.forRoot([], { relativeLinkResolution: 'legacy' }),
-        NbThemeModule.forRoot(),
-        NbLayoutModule,
-        NbListModule,
-      ],
+      imports: [RouterModule.forRoot([]), NbThemeModule.forRoot(), NbLayoutModule, NbListModule],
       providers: [NbLayoutScrollService, { provide: APP_BASE_HREF, useValue: '/' }],
       declarations: [ScrollTestComponent],
     }).createComponent(ScrollTestComponent);

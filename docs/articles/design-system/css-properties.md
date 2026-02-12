@@ -8,7 +8,7 @@ Starting with Nebular 4, Nebular can run in custom CSS properties mode in a simp
 <div class="note note-info section-end">
   <div class="note-title">Setup Required</div>
   <div class="note-body">
-    This guide assumes you already enabled <a href="docs/design-system/enable-customizable-theme">Theme Customization</a> 
+    This guide assumes you already enabled <a href="docs/design-system/enable-customizable-theme">Theme Customization</a>
     and reviewed <a href="docs/design-system/design-system-theme">Eva Design System Theme</a> rules.
   </div>
 </div>
@@ -18,9 +18,9 @@ Starting with Nebular 4, Nebular can run in custom CSS properties mode in a simp
 To enable the mode, find your `themes.scss` and set the `$nb-enable-css-custom-properties` to `true`:
 
 ```scss
-@forward '@nebular/theme/styles/theming';
-@use '@nebular/theme/styles/theming' as *;
-@use '@nebular/theme/styles/themes/default';
+@forward '@commudle/theme/styles/theming';
+@use '@commudle/theme/styles/theming' as *;
+@use '@commudle/theme/styles/themes/default';
 
 $nb-enable-css-custom-properties: true; // <-- enable css custom properties
 

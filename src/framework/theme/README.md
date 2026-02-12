@@ -1,1 +1,1 @@
-### @nebular/theme module, more details https://akveo.github.io/nebular/
+### @commudle/theme module, more details https://akveo.github.io/nebular/
